@@ -15,3 +15,4 @@ class CategoryLoading extends CourseState {}
 
 class CategoryLoaded extends CourseState {}
 class CategoryError extends CourseState {}
+

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:futursity/Repository/Api/Bloc/Course/course_bloc.dart';
+import 'package:futursity/Repository/Api/CoursePageApi/course_api.dart';
 import 'View/CourseScreen/course_screen.dart';
 
 void main() {
@@ -10,12 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Futursity',
-      theme: ThemeData(
-        primarySwatch: Colors.grey,
+    CourseApi courseApi = CourseApi();
+    return BlocProvider(
+      create: (context) => CourseBloc(courseApi),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Futursity',
+        theme: ThemeData(
+          primarySwatch: Colors.grey,
+        ),
+        home: const ScreenCourse(),
       ),
-      home: const ScreenCourse(),
     );
   }
 }

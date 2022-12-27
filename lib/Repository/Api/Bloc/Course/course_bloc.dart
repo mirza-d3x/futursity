@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:futursity/Model/categories_model.dart';
-import 'package:futursity/Model/top_course_model.dart';
-import 'package:futursity/Repository/Api/CoursePageApi/course_api.dart';
 import 'package:meta/meta.dart';
 
-part 'course_event.dart';
+import '../../../../Model/categories_model.dart';
+import '../../../../Model/top_course_model.dart';
+import '../../CoursePageApi/course_api.dart';
 
+part 'course_event.dart';
 part 'course_state.dart';
 
 class CourseBloc extends Bloc<CourseEvent, CourseState> {
@@ -37,3 +37,4 @@ class CourseBloc extends Bloc<CourseEvent, CourseState> {
     });
   }
 }
+
