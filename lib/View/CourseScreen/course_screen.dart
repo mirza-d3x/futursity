@@ -30,6 +30,8 @@ class _ScreenCourseState extends State<ScreenCourse> {
       appBar: AppBar(
         title: const Icon(Icons.shield),
         backgroundColor: Colors.white,
+        leadingWidth: 30,
+        leading: const SizedBox(width: 30,),
       ),
       body: Container(
         height: mHeight,
@@ -111,10 +113,11 @@ class _ScreenCourseState extends State<ScreenCourse> {
                               ),
                               Expanded(
                                 child: Container(
+                                  padding: const EdgeInsets.only(top: 5,right: 5,left: 5),
                                   child: Text(
                                     topCourseModel[index].title!,
                                     style: const TextStyle(
-                                        fontSize: 22, color: Colors.blue),
+                                        fontSize: 20, color: Colors.blue),
                                   ),
                                 ),
                               ),
@@ -188,6 +191,7 @@ class _ScreenCourseState extends State<ScreenCourse> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
+                                padding: const EdgeInsets.only(top: 3,left: 5,right: 5),
                                 child: Text(
                                   categoriesModel[index].name!,
                                   style: const TextStyle(
