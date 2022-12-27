@@ -10,6 +10,6 @@ class ScreenCourse extends StatefulWidget {
 class _ScreenCourseState extends State<ScreenCourse> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(body: Container(),);
   }
 }

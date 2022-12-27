@@ -4,7 +4,7 @@ import 'package:http/http.dart';
 import 'api_exception.dart';
 
 class ApiClient {
-  static const String basePath = 'http://178.18.253.201/';
+  static const String basePath = 'https://futursity.com/course/api';
 
   Future<Response> invokeAPI(
       {required String path,
